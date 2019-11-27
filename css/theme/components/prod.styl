@@ -1,0 +1,281 @@
+.product-image-gallery, .product-image-thumbs .thumb-link, .product-image-thumbs .thumb-link.on
+    box-shadow: none
+
+.prod
+    &__name h1
+        font-size: 24px
+        font-weight: semibold
+        color: #3b3732
+        line-height: 1.2
+        padding-bottom: 10px
+
+    &__shop
+        .product-rate .to-rate, .configurable:before
+            display: none
+
+        .sku
+            font-size: 12px
+            font-weight: regular
+
+        .brand
+            font-size: 12px
+            font-weight: regular
+
+            &:before
+                content: 'Marca: '
+
+            a
+                font-size: 12px
+                color: color2_bg
+                opacity: 1
+
+                span
+                    display: none
+
+                &:before
+                    content: attr(title)
+
+        .add-to-cart-buttons
+            display: flex
+
+        .add-to-cart-btn
+            flex: 0 0 190px
+            padding: 0
+            height: 60px
+            background: #59e874
+            font-size: 18px
+            font-weight: semibold
+            color: #fff
+            width: 190px
+            box-shadow: none
+
+            &:hover
+                background: rgba(#59e874, 0.2)
+
+        .price-box
+            .regular-price, .special-price
+                span
+                    font-size: 20px
+
+            .old-price
+                font-size: 14px
+
+        .price-box-parcelado
+            .preco-parcelado, .preco-parcelado-sem-juros
+                font-size: 17px
+
+.add-to-links a, .frete__title, .tabs__tab.on, .tabs__tab, .related__title, .reviews__title
+    font-size: 14px
+    font-weight: medium
+    color: color2_bg
+
+.frete__title
+    justify-content: space-between
+
+    > span
+        order: -1
+        margin-left: 0
+
+@media (min-width: 569px)
+    .tabs
+        border-top: solid 1px #ebebeb
+        padding-top: 30px
+
+        &__tab
+            border: 0
+            font-size: 12px
+            font-weight: medium
+            color: #999999
+            text-align: left
+            height: 55px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding-left: 0
+
+            &.on
+                font-size: 20px
+                font-weight: semibold
+                color: color1_bg
+
+        &__content
+            border: 0
+            padding: 10px 0
+
+            .std
+                font-size: 13px
+                font-weight: 400
+                color: #444444
+
+    .related__title, .reviews__title
+        font-size: 16px
+        font-weight: semibold
+        color: color1_bg
+
+    .related
+        position: relative
+        padding-top: 50px
+
+        &:before
+            content: ''
+            position: absolute
+            left: 50%
+            top: 0
+            height: 1px
+            width: 100vw
+            background: #ebebeb
+            transform: translateX(-50%)
+
+        &__subtitle, &__add-checkbox
+            display: none
+
+    .reviews
+        background: #f7f7f7
+        padding: 40px 0
+        color: color2_bg
+
+        input, textarea
+            box-shadow: none
+            border: 0
+
+        .form-list label
+            font-size: 12px
+            font-weight: regular
+            color: color2_bg
+
+        .subtitle
+            font-size: 16px
+            color: color2_bg
+
+        &__title
+            padding: 16px
+
+        &__content
+            display: block
+
+        &__add, &__resume, &__ratings
+            margin: 0 0 20px
+            background: none
+            box-shadow: none
+
+        .btn
+            font-size: 16px
+            font-weight: semibold
+
+    .add-to-links a
+        box-shadow: none
+        text-align: left
+        font-size: 12px
+        font-weight: medium
+        color: #c6c6c6
+
+        &:before
+            icon('\f004')
+            margin-right: 5px
+            color: color1_bg
+
+    .frete
+        &__title
+            pointer-events: none
+            border: 0
+            padding: 15px 0
+
+            .ico
+                display: none
+                font-size: 14px
+                font-weight: semibold
+                color: #3b3732
+
+        &__content
+            display: block
+
+        &__form
+            background: #f7f7f7
+            border-radius: 4px
+
+            .input-text
+                box-shadow: none
+                background: none
+                border: 0
+
+            label
+                display: none
+
+        &__naosei
+            display: none
+
+        &__actions
+            .btn
+                font-size: 12px
+                font-weight: semibold
+                color: #fff
+                height: 42px
+                background: none
+                color: color1_bg
+                box-shadow: none
+
+                &:hover
+                    background: none
+                    color: color1_bg
+
+                &:before
+                    content: 'Calcular'
+
+                span
+                    display: none
+
+@media (min-width: 993px)
+    .reviews
+        box-shadow: 800px 0 0 #f7f7f7, -800px 0 0 #f7f7f7
+
+        &__content
+            display: flex
+
+    .prod
+        &__head
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin-bottom: 20px
+
+            .brand
+                padding-top: 0
+                margin: 0 20px
+
+        &__shop
+            .add-to-cart-buttons
+                max-width: 255px
+
+        &__img
+            flex: 0 0 49%
+
+        &__buys
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+
+            .add-to-cart, .qty-wrapper
+                margin-bottom: 0
+
+    .frete
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        max-width: 360px
+
+        &__title
+            box-shadow: none
+            margin-right: 10px
+            flex: 1
+            min-width: 0
+
+        &__content
+            flex: 0 0 auto
+            min-width: 0
+
+            .input-box
+                max-width: 135px
+
+        &__results
+            flex: 0 0 100%
+            margin-top: 10px

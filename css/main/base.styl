@@ -3910,18 +3910,6 @@ body.safari .product-image-thumbs .thumb-link
 .prod__shop .add-to-cart-buttons
     position: relative
 
-/* qtd */
-.prod__shop .qty-wrapper
-    position: absolute
-    top: 50%
-    left: 0.625rem
-    transform: translateY(-50%)
-
-.prod__shop .qty-wrapper input
-    color: #fff
-    border: 1px solid rgba(0, 0, 0, 0.1)
-    background: rgba(0, 0, 0, 0.1)
-
 /* @descricao(curta) */
 .prod__short-desc
     font-size: 0.8rem
@@ -9672,25 +9660,6 @@ table .change-product-link:hover
     .frete__title span{@order -1}, .frete__title .ico
         margin: 0 0 0 auto
 
-    .frete__content
-        position: fixed
-        top: 0
-        left: 100%
-        width: 100vw
-        height: 100vh
-        overflow-y: auto
-        z-index: 999
-        padding: 1rem
-        background: #fff
-        transition: 600ms cubic-bezier(0.23, 1, 0.32, 1)
-        align-items: center
-        justify-content: center
-        flex-flow: column nowrap
-        display: flex
-
-    .frete--open .frete__content
-        transform: translateX(-100%)
-        display: flex
 
     .frete__hide
         display: block
@@ -9709,7 +9678,7 @@ table .change-product-link:hover
         height: 100vh
         overflow-y: auto
         z-index: 9999
-        display: block !important
+        display: block
         transition: 600ms cubic-bezier(0.23, 1, 0.32, 1)
         transform: translateY(100%)
 
