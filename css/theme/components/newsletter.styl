@@ -1,0 +1,52 @@
+.newsletter
+    background: #2a2d45
+    padding: (gap / 2)
+
+    &__text
+        color: #fff
+        text-align: center
+        font-size: 13px
+        font-weight: medium
+        line-height: 1.3
+
+        h2
+            margin-bottom: 0
+            font-size: 16px
+            font-weight: semibold
+
+    .input-text
+        height: 42px
+        box-shadow: none
+
+        &::placeholder
+            color: rgba(0, 0, 0, 0.4)
+            font-size: 12px
+            font-weight: medium
+
+    &__btn
+        height: 42px
+        font-size: 12px
+        font-weight: medium
+        color: #fff
+
+@media (min-width: 569px)
+    .newsletter
+        &__email
+            flex: 1
+            min-width: 0
+            padding-right: 0
+
+        &__submit
+            position: relative
+            z-index: 2
+            padding-left: 0
+            margin-left: -3px
+            flex: 0 1 130px
+
+@media (min-width: 993px)
+    .newsletter
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 30px
+        height: 100%

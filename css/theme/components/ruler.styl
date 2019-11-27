@@ -1,9 +1,16 @@
 #banner__ruler
+    display: none
     font-size: 10px
     font-weight: semi-bold
     background: color1_bg
     color: #fff
+    margin-bottom: 0 !important
 
     & .banner
         &__wrapper
+            width: viewport !important
             @extend $container
+
+@media (min-width: 993px)
+    #banner__ruler
+        display: block

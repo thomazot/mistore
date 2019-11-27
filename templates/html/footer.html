@@ -1,0 +1,39 @@
+<div class="footer__container">
+        <div class="footer__item">
+            <h3 class="footer__title">Central de Atendimento</h3>
+            <div class="footer__content">
+                    <div class="footer__phone">
+                        <svg class="ico z-phone"><use xlink:href="#z-phone" /></svg>
+                        <span>47</span> <strong>3308 7268</strong>
+                    </div>
+                    <p>De Seg. à Sex. das 08h às 18h</p>
+                    <p>Sábados Das 09h às 13h</p>
+            </div>
+        </div>
+    
+        <div class="footer__item">
+            <h3 class="footer__title">Institucional</h3>
+            {{block type="menubuilder/output" identifier="footer-institucional"}}
+        </div>
+    
+        <div class="footer__item">
+            <h3 class="footer__title">Tire suas Dúvidas</h3>
+            {{block type="menubuilder/output" identifier="footer-helper"}}
+        </div>
+    
+        <div class="footer__item">
+            <h3 class="footer__title">Redes sociais</h3>
+            {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="social" redes="all"}}
+        </div>
+    
+        <div class="footer__item">
+            <h3 class="footer__title">Pagamentos</h3>
+            {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer"  pagtos="all"}}
+        </div>
+    
+        <div class="footer__item">
+            <h3 class="footer__title">Segurança</h3>
+            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer" titulo="Certificados" seals="all"}}
+        </div>
+    
+    </div>

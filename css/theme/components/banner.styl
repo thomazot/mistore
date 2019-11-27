@@ -1,2 +1,59 @@
 .cms-home .header-container + .banner
-    margin: 0
+    margin-top: -16px
+
+.banner-grid
+    img
+        width: 100%
+        height: auto
+        object-fit: contain
+
+#banner__banner-home-vitrine
+    .banner__link
+        display: block
+        margin: 0 auto
+
+        img
+            margin: 0 auto
+
+@media (min-width: 993px)
+    .cms-home .header-container + .banner
+        margin-top: -86px
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+    .banner-grid
+        margin-top: -50px
+        padding-bottom: 30px
+
+        &__container
+            @extend $container
+            display: grid
+            grid-template-areas: 'item1 item2' 'item3 item4' 'item3 item5'
+            grid-template-rows: 460px 240px 160px
+            grid-template-columns: 1fr 1fr
+            grid-gap: 1px
+
+        &__item
+            overflow: hidden
+
+            &:nth-child(1)
+                grid-area: item1
+
+            &:nth-child(2)
+                grid-area: item2
+
+            &:nth-child(3)
+                grid-area: item3
+
+            &:nth-child(4)
+                grid-area: item4
+
+            &:nth-child(5)
+                grid-area: item5
+
+    #banner__banner-home-vitrine
+        margin-top: -50px
+        margin-bottom: 50px

@@ -2,3 +2,24 @@
     &-container
         position: sticky
         top: 0
+        background: #fff
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05)
+
+        &.up
+            transform: translateY(-50px)
+
+@media (min-width: 569px)
+    .header
+        padding: (gap / 2) 0
+
+@media (min-width: 993px)
+    .header
+        padding: 0
+
+        &-container
+            background: none
+            box-shadow: none
+
+            .scrolling &
+                background: #fff
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05)

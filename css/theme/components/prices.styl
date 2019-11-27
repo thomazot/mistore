@@ -1,0 +1,46 @@
+.price-box
+    .old-price
+        .label
+            display: none
+
+        .price
+            text-decoration: none
+
+            span
+                font-size: 12px
+                font-weight: medium
+                color: #d1d1d1
+
+                &:before
+                    content: 'De '
+
+    .regular-price, .special-price
+        .label
+            display: none
+
+        .price span
+            font-size: 17px
+            font-weight: semibold
+            color: color2_bg
+
+            &:before
+                content: 'Por '
+
+.price-box-parcelado
+    .preco-parcelado, .preco-parcelado-sem-juros
+        font-size: 14px
+        font-weight: medium
+        color: #b0b0b0
+
+        .upto
+            display: none
+
+        .num, .value
+            span
+                color: color1_bg
+
+        + .preco-parcelado
+            display: none
+
+.price-box-avista
+    display: none

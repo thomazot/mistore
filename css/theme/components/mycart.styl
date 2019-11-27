@@ -1,0 +1,38 @@
+.mycart
+    .header &
+        margin-left: 0
+
+    &.on
+        z-index: 30
+
+    &:hover
+        .mycart__header a
+            background: none
+
+            .ico
+                fill: color2_bg
+
+    &__header
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 48px
+        min-height: 48px
+
+        .ico
+            width: 16px
+            height: 14px
+
+        .qtd
+            position: absolute
+            top: 0
+            right: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            background: color1_bg
+            font-size: 9px
+            color: #fff

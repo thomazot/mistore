@@ -1,5 +1,17 @@
 @media (max-width: 992px)
     .categories
+        &__show
+            background: #fff
+            color: color1_bg
+            order: -1
+            display: flex
+            justify-content: flex-start
+            aling-items: center
+
+            &:hover
+                background: #fff
+                color: color1_bg
+
         .parent
             position: relative
 
@@ -27,8 +39,9 @@
                 width: 48px
                 height: 48px
                 font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
+                background: none
                 transition: all 0.2s ease
+                color: #fff
 
             &.on
                 &:after
@@ -42,4 +55,81 @@
 
 @media (min-width: 993px)
     .categories
+        flex: 1
+        min-width: 0
         margin-bottom: 0 !important
+        background: none
+
+        &__all
+            .a--0
+                display: flex
+                justify-content: center
+                align-items: center
+
+                > span
+                    height: 17px
+
+            .ico
+                fill: color2_bg
+                width: 10px
+                height: 9px
+                margin-right: 5px
+
+        .ul--0
+            position: static
+
+        .a--0
+            font-size: 12px
+            font-weight: medium
+            line-height: 1.3
+            color: color2_bg
+            white-space: nowrap
+            height: 70px
+            position: relative
+            overflow: hidden
+
+            &:before
+                content: ''
+                position: absolute
+                top: 65px
+                left: 50%
+                width: 10px
+                height: 10px
+                margin-left: -5px
+                transform: rotate(45deg)
+                background: rgba(255, 255, 255, 0.9)
+                opacity: 0
+
+        .all-a--0, .a--1
+            font-size: 13px
+            font-weight: semibold
+            color: color2_bg
+
+            &:hover
+                color: color1_bg
+                box-shadow: none
+
+        .all-a--1
+            &:hover
+                box-shadow: none
+
+        .li--0
+            order: 1
+            position: static
+
+            &.categories__all
+                order: 2
+
+            &:hover
+                .a--0
+                    background: none
+                    color: color2_bg
+
+                    &:before
+                        opacity: 1
+
+        .box--1
+            width: 100%
+            box-shadow: none
+            background: rgba(255, 255, 255, 0.9)
+            box-shadow: 800px 0 0 rgba(255, 255, 255, 0.9), -800px 0 0 rgba(255, 255, 255, 0.9)

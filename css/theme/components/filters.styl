@@ -1,0 +1,68 @@
+.filters
+    .link, &__name, .count
+        color: #fff
+
+@media (min-width: 993px)
+    .filtered
+        &__name
+            font-size: 12px
+            color: #3c3733
+
+        &__value
+            font-size: 12px
+            font-weight: semibold
+            color: color1_bg
+
+    .filters
+        .count, .title
+            display: none
+
+        .link, &__name, .count, .a--0, .subtitle, .filtered__clear
+            color: #3c3733
+            font-size: 12px
+            font-weight: regular
+
+        &__name
+            padding-right: 30px
+
+            &:after
+                content: ''
+                position: absolute
+                top: 50%
+                right: 16px
+                border-left: solid 5px transparent
+                border-right: solid 5px transparent
+                border-top: solid 5px color1_bg
+                transform: translateY(-50%)
+
+        &__list
+            display: flex
+
+        &__filter
+            position: relative
+            min-width: 150px
+            height: 50px
+            box-shadow: none
+            background: #f7f7f7
+            border-radius: 4px
+
+            + .filters__filter
+                margin-left: 10px
+
+            > ul, > ol, > .filters__swatches
+                position: absolute
+                top: 100%
+                left: 0
+                min-width: 100%
+                background: #f7f7f7
+                padding: 16px
+                opacity: 0
+                visibility: hidden
+                transition: all 0.2s ease
+
+            &:hover
+                box-shadow: none
+
+                > ul, > ol, > .filters__swatches
+                    opacity: 1
+                    visibility: visible
