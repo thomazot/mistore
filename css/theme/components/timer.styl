@@ -1,0 +1,41 @@
+.timer
+    background: #fff
+    border-radius: 4px
+    margin: 0 0 20px
+
+    .title
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 26px
+        margin-bottom: 0
+        border-radius: 4px 4px 0 0
+        font-size: 11px
+        font-weight: semibold
+        background: color1_bg
+        color: #fff
+
+    &__ani, &__afterhours, &__afterminutes
+        display: none
+
+    &__clock
+        display: flex
+        align-items: center
+        justify-content: space-around
+        padding: 15px 0
+        border: solid 1px #ebebeb
+        border-top: 0
+        border-radius: 0 0 4px 4px
+
+    &__days, &__hours, &__minutes, &__seconds
+        display: flex
+        align-items: flex-end
+
+    &__time
+        font-size: 15px
+        font-weight: medium
+        margin-right: 5px
+
+    &__label
+        font-size: 11px
+        font-weight: 300

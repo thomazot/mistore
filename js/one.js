@@ -1459,6 +1459,12 @@ $j(document)
             }
         })
 
+        var jointsales = $('.jointsales__row');
+        console.log('jointsales')
+        if(jointsales) {
+            console.log('jointsales')
+        }
+
         // Header sticky
         stickybits('.header-container')
     })

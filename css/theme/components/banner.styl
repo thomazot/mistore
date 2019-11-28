@@ -1,6 +1,9 @@
 .cms-home .header-container + .banner
     margin-top: -16px
 
+    + script + .timer
+        display: none
+
 .banner-grid
     img
         width: 100%
@@ -23,6 +26,21 @@
             object-fit: cover
             width: 100%
             height: 100%
+
+        + script + .timer
+            position: relative
+            z-index: 10
+            display: block
+            margin-top: -210px
+            margin-bottom: 130px
+            @extend $container
+            background: none
+
+            .title, .timer__clock
+                max-width: 270px
+
+            .timer__clock
+                background: #fff
 
     .banner-grid
         margin-top: -50px
