@@ -918,9 +918,9 @@ form.searchautocomplete {
   margin: 0 -0.5rem -1rem;
 }
 .products__item {
-  flex: 1 1 250px;
+  flex: 1 1 200px;
   display: flex;
-  min-width: 250px;
+  min-width: 200px;
   margin: 0;
   padding: 0 0.5rem 1rem;
 }
@@ -11554,7 +11554,7 @@ body {
     grid-area: item5;
   }
   #banner__banner-home-vitrine {
-    margin-top: -3.13rem;
+    margin-top: -1.56rem;
     margin-bottom: 3.13rem;
   }
 }
@@ -11823,6 +11823,16 @@ body {
 .category-title,
 .category-description {
   display: none !important;
+}
+.catalog-category-view .col-main .category-image {
+  display: none;
+}
+.category-image img {
+  display: block;
+  margin: 0 auto;
+}
+.ias-noneleft {
+  display: none;
 }
 @media (min-width: 993px) {
   .catalog-category-view .main {
@@ -12145,6 +12155,14 @@ body {
 .footer .socials__svg {
   height: 1.25rem;
 }
+.opc .footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.opc .footer h3 {
+  color: #fff;
+}
 @media (min-width: 993px) {
   .footer {
     text-align: left;
@@ -12218,6 +12236,15 @@ body {
 }
 .header-container.up {
   transform: translateY(-50px);
+}
+.opc .myaccount {
+  display: none;
+}
+.opc .header {
+  padding: 1.25rem 0;
+}
+.opc .header-container {
+  background: #fff;
 }
 @media (min-width: 569px) {
   .header {
@@ -12351,6 +12378,57 @@ body {
   background: #21e045;
   color: #fff;
 }
+.jointsales__payments .avista {
+  display: none;
+}
+.jointsales__payments .preco-parcelado-sem-juros {
+  font-size: 1.06rem;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+.jointsales__payments .preco-parcelado-sem-juros + .preco-parcelado,
+.jointsales__payments .preco-parcelado-sem-juros .upto {
+  display: none;
+}
+.jointsales__payments .preco-parcelado-sem-juros .num,
+.jointsales__payments .preco-parcelado-sem-juros .value {
+  font-weight: 600;
+  color: @bg(1);
+}
+.jointsales__payments .preco-parcelado-sem-juros .s-juros {
+  background: none;
+  color: #b0b0b0;
+  padding: 0;
+  font-size: 1.06rem;
+}
+.jointsales__totals .economize {
+  display: none;
+}
+.jointsales__totals .todos-juntos {
+  font-size: 0;
+}
+.jointsales__totals .todos-juntos .price {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #d1d1d1;
+}
+.jointsales__totals .todos-juntos .price:before {
+  content: 'De: ';
+}
+.jointsales__totals .comprando-junto {
+  font-size: 0;
+}
+.jointsales__totals .comprando-junto > .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+}
+.jointsales__totals .comprando-junto > .price span {
+  color: #000;
+}
+.jointsales__totals .comprando-junto > .price:before {
+  content: 'Por: ';
+}
 @media (min-width: 993px) {
   .jointsales__title {
     display: flex;
@@ -12384,6 +12462,43 @@ body {
   }
   .jointsales__row {
     justify-content: flex-start;
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: 'join1 join2 join3' 'join1 join2 join4' 'join1 join2 join5';
+    -ms-grid-rows: 1fr 20px 1fr;
+    grid-template-rows: 1fr 20px 1fr;
+  }
+  .jointsales__current {
+    grid-area: join1;
+  }
+  .jointsales__list {
+    grid-area: join2;
+    margin-right: 3.75rem;
+  }
+  .jointsales__totals {
+    grid-area: join3;
+    border: solid 1px #ebebeb;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    padding: 1.25rem 1.25rem 0;
+  }
+  .jointsales__payments {
+    grid-area: join4;
+    border-right: solid 1px #ebebeb;
+    border-left: solid 1px #ebebeb;
+    padding: 0 1.25rem;
+  }
+  .jointsales__action {
+    grid-area: join5;
+    display: flex;
+    align-self: flex-start;
+    padding: 0 1.25rem 1.25rem;
+    border: solid 1px #ebebeb;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
+  .jointsales__action button {
+    margin-bottom: -3.13rem;
   }
   .jointsales__item {
     flex: 0 1 320px;
@@ -12395,6 +12510,30 @@ body {
   .jointsales__payments,
   .jointsales__action {
     flex: 0 0 33.333%;
+  }
+}
+@media (min-width: 993px) {
+  .jointsales__current {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  .jointsales__list {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+  }
+  .jointsales__totals {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .jointsales__payments {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .jointsales__action {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 }
 
@@ -12411,6 +12550,9 @@ body {
 
 .myaccount.on {
   z-index: 30;
+}
+.myaccount:hover .myaccount__content {
+  display: none !important;
 }
 .myaccount__header {
   display: flex;
@@ -12429,6 +12571,9 @@ body {
 }
 .mycart.on {
   z-index: 30;
+}
+.mycart:hover .mycart__content {
+  display: none !important;
 }
 .mycart:hover .mycart__header a {
   background: none;
@@ -12631,6 +12776,42 @@ body {
 .prod__shop .product-rate .to-rate,
 .prod__shop .configurable:before {
   display: none;
+}
+.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado {
+  display: block !important;
+}
+.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado .juros {
+  display: inline;
+}
+.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado .juros span {
+  color: #b0b0b0;
+}
+.prod__shop .configurable select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: 0;
+  padding: 0 0.94rem;
+  background: none;
+  height: 3.13rem;
+  font-size: 0.88rem;
+  color: #3c3733;
+}
+.prod__shop .configurable__content {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 4px;
+}
+.prod__shop .configurable__content:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-top: solid 5px @bg(1);
+  transform: translateY(-50%);
 }
 .prod__shop .sku {
   font-size: 0.75rem;
@@ -12883,6 +13064,13 @@ body {
   .prod__shop .timer {
     max-width: 270px;
   }
+  .prod__shop .configurable {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .prod__shop .configurable__caption {
+    display: none;
+  }
   .prod__img {
     flex: 0 0 49%;
   }
@@ -12917,6 +13105,13 @@ body {
   .frete__results {
     flex: 0 0 100%;
     margin-top: 0.63rem;
+  }
+  .product-rate .circle-percent {
+    max-width: 100px;
+  }
+  .product-rate .percent .text {
+    font-size: 2.13rem;
+    margin-top: -0.31rem;
   }
 }
 
@@ -12986,6 +13181,11 @@ body {
 #products--offer .owl-prev .ico,
 #products--offer .owl-next .ico {
   fill: #000;
+}
+@media (max-width: 992px) {
+  .products__case {
+    text-align: center;
+  }
 }
 @media (min-width: 993px) {
   .products .owl-pagination {

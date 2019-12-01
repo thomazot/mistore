@@ -93,6 +93,57 @@
             background: darken(#59e874, 20%)
             color: #fff
 
+    &__payments
+        .avista
+            display: none
+
+        .preco-parcelado-sem-juros
+            font-size: 17px
+            font-weight: medium
+            color: #b0b0b0
+
+            + .preco-parcelado, .upto
+                display: none
+
+            .num, .value
+                font-weight: semibold
+                color: color1_bg
+
+            .s-juros
+                background: none
+                color: #b0b0b0
+                padding: 0
+                font-size: 17px
+
+    &__totals
+        .economize
+            display: none
+
+        .todos-juntos
+            font-size: 0
+
+            .price
+                font-size: 14px
+                font-weight: semibold
+                color: #d1d1d1
+
+                &:before
+                    content: 'De: '
+
+        .comprando-junto
+            font-size: 0
+
+            > .price
+                font-size: 20px
+                font-weight: semibold
+                color: #000
+
+                span
+                    color: #000
+
+                &:before
+                    content: 'Por: '
+
 @media (min-width: 993px)
     .jointsales
         &__title
@@ -126,6 +177,41 @@
 
         &__row
             justify-content: flex-start
+            display: grid
+            grid-template-areas: 'join1 join2 join3' 'join1 join2 join4' 'join1 join2 join5'
+            grid-template-rows: 1fr 20px 1fr
+
+        &__current
+            grid-area: join1
+
+        &__list
+            grid-area: join2
+            margin-right: 60px
+
+        &__totals
+            grid-area: join3
+            border: solid 1px #ebebeb
+            border-bottom: 0
+            border-radius: 4px 4px 0 0
+            padding: 20px 20px 0
+
+        &__payments
+            grid-area: join4
+            border-right: solid 1px #ebebeb
+            border-left: solid 1px #ebebeb
+            padding: 0 20px
+
+        &__action
+            grid-area: join5
+            display: flex
+            align-self: flex-start
+            padding: 0 20px 20px
+            border: solid 1px #ebebeb
+            border-top: 0
+            border-radius: 0 0 4px 4px
+
+            button
+                margin-bottom: -50px
 
         &__item
             flex: 0 1 320px
