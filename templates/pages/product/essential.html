@@ -20,12 +20,18 @@
 
 		@if(is_disponivel)
 			@preco
-			@preco(avista)
 			@preco(parcelado)	
+            @preco(avista)
         
             @brinde
         
             @programa-fidelidade(Compre e Ganhe)
+        
+        	 @if(restam_apenas)
+            <div class="products__stock">
+                <span>Restam apenas</span> @atributo(restam_apenas)
+            </div>
+            @endif(restam_apenas)
 
             <div class="prod__buys">
                 @bt(comprar)

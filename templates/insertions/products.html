@@ -5,7 +5,12 @@
     @selos
 </h2>
 <div class="products__main">
-        @variacoes
+    @if(restam_apenas)
+	<div class="products__stock">
+        <span>Restam apenas</span> @atributo(restam_apenas)
+    </div>
+    @endif(restam_apenas)
+    @variacoes
 	<a href="@url" title="@nome(60)" class="products__name">@nome</a>
 	@avaliacoes
 	@if(is_disponivel)

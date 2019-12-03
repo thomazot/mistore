@@ -79,7 +79,11 @@
         flex-wrap: wrap
 
         h3
-            color: #fff
+            color: color1_bg
+
+        &__item
+            flex: 0 0 100%
+            min-width: 0
 
 @media (min-width: 993px)
     .footer
@@ -112,3 +116,8 @@
 
             &:nth-child(6)
                 grid-area: col6
+
+    .opc
+        .footer
+            &__item
+                flex: 0 0 auto

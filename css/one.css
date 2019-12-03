@@ -11832,7 +11832,7 @@ body {
   margin: 0 auto;
 }
 .ias-noneleft {
-  display: none;
+  display: none !important;
 }
 @media (min-width: 993px) {
   .catalog-category-view .main {
@@ -12161,7 +12161,11 @@ body {
   flex-wrap: wrap;
 }
 .opc .footer h3 {
-  color: #fff;
+  color: @bg(1);
+}
+.opc .footer__item {
+  flex: 0 0 100%;
+  min-width: 0;
 }
 @media (min-width: 993px) {
   .footer {
@@ -12196,6 +12200,9 @@ body {
   }
   .footer__item:nth-child(6) {
     grid-area: col6;
+  }
+  .opc .footer__item {
+    flex: 0 0 auto;
   }
 }
 @media (min-width: 993px) {
@@ -12777,14 +12784,28 @@ body {
 .prod__shop .configurable:before {
   display: none;
 }
-.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado {
-  display: block !important;
+.prod__shop .price-box-parcelado {
+  margin-bottom: 0;
 }
-.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado .juros {
-  display: inline;
+.prod__shop .price-box-avista {
+  display: flex;
 }
-.prod__shop .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado .juros span {
-  color: #b0b0b0;
+.prod__shop .price-box-avista .price span,
+.prod__shop .price-box-avista .label span {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #3098e1;
+}
+.prod__shop .price-box-avista .price {
+  flex: 0 0 auto;
+  order: -1;
+  margin-right: 0.19rem;
+}
+.prod__shop .price-box-avista .price span:before {
+  content: 'ou ';
+}
+.prod__shop .price-box-avista .label span span:after {
+  content: '% ';
 }
 .prod__shop .configurable select {
   -webkit-appearance: none;
@@ -13129,6 +13150,15 @@ body {
   margin-right: 0.63rem;
   margin-bottom: -0.25rem;
 }
+.products__stock {
+  font-size: 0.69rem;
+  font-weight: 600;
+  color: @bg(1);
+  padding-bottom: 0.31rem;
+}
+.products__stock span {
+  color: #333;
+}
 .products__case {
   box-shadow: none;
   border-radius: 4px;
@@ -13186,6 +13216,9 @@ body {
   .products__case {
     text-align: center;
   }
+  .products__case .configurable-swatch-list {
+    justify-content: center;
+  }
 }
 @media (min-width: 993px) {
   .products .owl-pagination {
@@ -13196,15 +13229,9 @@ body {
   }
   .products__main {
     position: relative;
-    padding-top: 2.81rem;
   }
   .products .product-rate {
     margin-bottom: 0.31rem;
-  }
-  .products .configurable-swatch-list {
-    position: absolute;
-    top: 0.63rem;
-    left: 0;
   }
 }
 

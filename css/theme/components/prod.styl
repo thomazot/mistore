@@ -13,14 +13,29 @@
         .product-rate .to-rate, .configurable:before
             display: none
 
-        .price-box-parcelado .preco-parcelado-sem-juros + .preco-parcelado
-            display: block !important
+        .price-box-parcelado
+            margin-bottom: 0
 
-            .juros
-                display: inline
+        .price-box-avista
+            display: flex
 
+            .price, .label
                 span
-                    color: #b0b0b0
+                    font-size: 13px
+                    font-weight: semibold
+                    color: #3098e1
+
+            .price
+                flex: 0 0 auto
+                order: -1
+                margin-right: 3px
+
+                span:before
+                    content: 'ou '
+
+            .label
+                span span:after
+                    content: '% '
 
         .configurable
             select
