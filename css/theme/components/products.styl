@@ -16,11 +16,32 @@
     &__stock
         font-size: 11px
         font-weight: semibold
-        color: color1_bg
         padding-bottom: 5px
+        margin-bottom: 5px
+        opacity: 0
 
         span
             color: #333333
+
+            &.qty
+                color: color1_bg
+
+        &.on
+            opacity: 1
+
+        .progress
+            width: 100%
+            height: 5px
+            background: #ebebeb
+            border-radius: 5px
+            margin-top: 2px
+            width: 100%
+            max-width: 170px
+
+            div
+                background: color1_bg
+                border-radius: 5px
+                height: 100%
 
     &__case
         box-shadow: none
@@ -85,6 +106,10 @@
 
             .configurable-swatch-list
                 justify-content: center
+
+        .products__stock
+            .progress
+                margin: 3px auto 5px
 
 @media (min-width: 993px)
     .products

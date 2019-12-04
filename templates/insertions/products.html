@@ -7,7 +7,8 @@
 <div class="products__main">
     @if(restam_apenas)
 	<div class="products__stock">
-        <span>Restam apenas</span> @atributo(restam_apenas)
+        <span>Restam apenas</span>
+		<span class="qty">@atributo(restam_apenas)</span>
     </div>
     @endif(restam_apenas)
     @variacoes

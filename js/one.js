@@ -1446,6 +1446,22 @@ function scrollTop() {
     })
 }
 
+var productsStock = function() {
+    $j('.products__stock:not(.on)').each(function() {
+        var qty = $j(this).find('.qty')
+        var unit = qty.text().split('/')
+
+        qty.html(unit[1] - unit[0] + ' unidades')
+        $j(this)
+            .append(
+                '<div class="progress"><div style="width: ' +
+                    (unit[0] * 100) / unit[1] +
+                    '%"></div></div>'
+            )
+            .addClass('on')
+    })
+}
+
 $j(document)
     .ready(function($) {
         // document.ready
@@ -1467,6 +1483,7 @@ $j(document)
 
         // Header sticky
         stickybits('.header-container')
+        productsStock()
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
@@ -1479,6 +1496,7 @@ $j(document)
     .on('ajaxComplete', function(resp) {
         // Safe ajax completed
         // Dispara apÃ³s completar com sucesso qualquer requisiÃ§Ã£o Ajax, e trÃ¡s a resposta do Ajax.
+        productsStock()
     })
 
 // Polyfill Sticky

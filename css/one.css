@@ -13153,11 +13153,32 @@ body {
 .products__stock {
   font-size: 0.69rem;
   font-weight: 600;
-  color: @bg(1);
   padding-bottom: 0.31rem;
+  margin-bottom: 0.31rem;
+  opacity: 0;
 }
 .products__stock span {
   color: #333;
+}
+.products__stock span.qty {
+  color: @bg(1);
+}
+.products__stock.on {
+  opacity: 1;
+}
+.products__stock .progress {
+  width: 100%;
+  height: 0.31rem;
+  background: #ebebeb;
+  border-radius: 5px;
+  margin-top: 0.13rem;
+  width: 100%;
+  max-width: 170px;
+}
+.products__stock .progress div {
+  background: @bg(1);
+  border-radius: 5px;
+  height: 100%;
 }
 .products__case {
   box-shadow: none;
@@ -13218,6 +13239,9 @@ body {
   }
   .products__case .configurable-swatch-list {
     justify-content: center;
+  }
+  .products .products__stock .progress {
+    margin: 0.19rem auto 0.31rem;
   }
 }
 @media (min-width: 993px) {
